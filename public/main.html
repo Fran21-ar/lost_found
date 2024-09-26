@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal - Subir Objeto Perdido o Encontrado</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <h1 class="title">Lost & Found</h1>
+    <br>
+    <br>
+    <main class="main">
+        
+        <form action="http://localhost:3000/objeto_perdido" method="POST" class="lose section">
+            <h2>Subir Objeto Perdido</h2>
+            <label for="tipo_perdido">Tipo de Objeto:</label>
+            <input type="text" name="tipo" id="tipo_perdido" required><br>
+
+            <label for="descripcion_perdido">Descripción:</label>
+            <textarea name="descripcion" id="descripcion_perdido" required></textarea><br>
+
+            <label for="numero_perdido">Número de contacto:</label>
+            <input type="text" name="numero" id="numero_perdido" required><br>
+
+            <label for="fecha_perdida">Fecha en la que se perdió:</label>
+            <input type="date" name="fecha" id="fecha_perdida" required><br>
+
+            <input type="hidden" name="id_usuario" value="1">
+            
+            <button type="submit">Subir Objeto Perdido</button>
+        </form>
+
+        
+        <form action="http://localhost:3000/objeto_encontrado" method="POST" class="found section">
+            <h2>Subir Objeto Encontrado</h2>
+            <label for="tipo_encontrado">Tipo de Objeto:</label>
+            <input type="text" name="tipo" id="tipo_encontrado" required><br>
+
+            <label for="descripcion_encontrado">Descripción:</label>
+            <textarea name="descripcion" id="descripcion_encontrado" required></textarea><br>
+
+            <label for="numero_encontrado">Número de contacto:</label>
+            <input type="text" name="numero" id="numero_encontrado" required><br>
+
+            <label for="fecha_encontrada">Fecha en la que se encontró:</label>
+            <input type="date" name="fecha" id="fecha_encontrada" required><br>
+
+            <input type="hidden" name="id_usuario" value="1">
+            
+            <button type="submit">Subir Objeto Encontrado</button>
+        </form>
+    </main>
+
+    <section class="history">
+        <div id="perdidos-container">
+            <h2>Objetos Perdidos</h2>
+            <ul id="lista-perdidos"></ul>
+        </div>
+        <div id="encontrados-container">
+            <h2>Objetos Encontrados</h2>
+            <ul id="lista-encontrados"></ul>
+
+        </div>
+    </section>
+    <script src="/scripts/script.js"></script>
+</body>
+</html>
