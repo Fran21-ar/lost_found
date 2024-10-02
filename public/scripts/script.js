@@ -9,9 +9,8 @@ window.onload = function() {
         })
         .then(data => {
             const listaPerdidos = document.getElementById('lista-perdidos');
-            listaPerdidos.innerHTML = ''; // Limpiar la lista antes de agregar
-
-            // Iterar sobre los datos y agregarlos a la lista
+            listaPerdidos.innerHTML = '';
+            
             data.forEach(objeto => {
                 const li = document.createElement('li');
                 li.textContent = `Tipo: ${objeto.tipo}, Descripción: ${objeto.descripcion}, Contacto: ${objeto.numero_contacto}`;
@@ -32,9 +31,8 @@ window.onload = function() {
         })
         .then(data => {
             const listaEncontrados = document.getElementById('lista-encontrados');
-            listaEncontrados.innerHTML = ''; // Limpiar la lista antes de agregar
+            listaEncontrados.innerHTML = ''; 
 
-            // Iterar sobre los datos y agregarlos a la lista
             data.forEach(objeto => {
                 const li = document.createElement('li');
                 li.textContent = `Tipo: ${objeto.tipo}, Descripción: ${objeto.descripcion}, Contacto: ${objeto.numero_contacto}`;
@@ -49,23 +47,7 @@ window.onload = function() {
 function searchFunction() {
     let input = document.getElementById('searchInput').value.toLowerCase();
     let items = document.getElementById('li');
-
-    // Recorrer todos los elementos y mostrar/ocultar según la búsqueda
-    for (let i = 0; i < items.length; i++) {
-        let item = items[i].innerText.toLowerCase();
-        if (item.includes(input)) {
-            items[i].classList.remove('hidden');
-        } else {
-            items[i].classList.add('hidden');
-        }
-    }
-}
-
-function searchFunction() {
-    let input = document.getElementById('searchInput').value.toLowerCase();
-    let items = document.getElementById('li');
-
-    // Recorrer todos los elementos y mostrar/ocultar según la búsqueda
+    
     for (let i = 0; i < items.length; i++) {
         let item = items[i].innerText.toLowerCase();
         if (item.includes(input)) {
@@ -80,7 +62,6 @@ function searchFunction2() {
     let input = document.getElementById('searchInput2').value.toLowerCase();
     let items = document.getElementById('li');
 
-    // Recorrer todos los elementos y mostrar/ocultar según la búsqueda
     for (let i = 0; i < items.length; i++) {
         let item = items[i].innerText.toLowerCase();
         if (item.includes(input)) {
