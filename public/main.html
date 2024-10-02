@@ -48,21 +48,24 @@
 
             <input type="hidden" name="id_usuario" value="1">
             
-            <button type="submit">Subir Objeto Encontrado</button>
+            <button type="submit" id="Subir-un-objeto">Subir Objeto Encontrado</button>
         </form>
     </main>
-
-    <section class="history">
-        <div id="perdidos-container">
+    
+    <section class="contenedor">     
+        <div id="perdidos-container">    
             <h2>Objetos Perdidos</h2>
+            <input type="text" id="searchInput" placeholder="Buscar..." onkeyup="searchFunction()" class="search">
             <ul id="lista-perdidos"></ul>
         </div>
+
         <div id="encontrados-container">
             <h2>Objetos Encontrados</h2>
+            <input type="text" id="searchInput2" placeholder="Buscar..." onkeyup="searchFunction2()" class="search">
             <ul id="lista-encontrados"></ul>
-
         </div>
     </section>
+
     <script src="/scripts/script.js"></script>
 </body>
 </html>
